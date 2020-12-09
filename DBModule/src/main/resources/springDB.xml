@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 <context:property-placeholder location="classpath:db.properties"></context:property-placeholder>
 <context:component-scan base-package="com.bdqn"></context:component-scan>
-    <bean id="dbUtil" class="com.bdqn.util.DBUtil">
+    <bean id="dbUtil" class="com.bdqn.util.DBUtil" init-method="init">
         <property name="properties">
             <props>
                 <prop key="url">${url}</prop>
