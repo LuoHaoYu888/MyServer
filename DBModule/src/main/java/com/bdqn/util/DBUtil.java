@@ -1,11 +1,13 @@
 package com.bdqn.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.Properties;
 
 //数据库工具类
+@Repository
 public class DBUtil {
    private Properties properties;
 
